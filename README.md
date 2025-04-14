@@ -7,7 +7,7 @@ Este projeto é o meu MVP da Sprint 3 do curso de **Desenvolvimento Full Stack B
 
 Objetivo: Criação de API integrada a website pessoal para divulgação de fotografias analógicas e campo de contato para parcerias de trabalho. Essa API é responsável por:
 (1) registro de clientes para banco de dados de contatos (Subscribe);
-(2) contato com campo de mensagem que será enviada diretamente para o fotógrafo (através da API externa "Brevo"). 
+(2) contato com campo de mensagem que será enviada diretamente para o fotógrafo (Contact). 
 ```
 ATENÇÃO: A chave informada no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo.
 ```
