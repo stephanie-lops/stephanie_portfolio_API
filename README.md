@@ -6,12 +6,13 @@
 Este projeto é o meu MVP da Sprint 3 do curso de **Desenvolvimento Full Stack Básico** da PUC RIO, 2024-2025.
 
 Objetivo: Criação de API integrada a website pessoal para divulgação de fotografias analógicas e campo de contato para parcerias de trabalho. Essa API é responsável por:
-(1) registro de clientes para banco de dados de contatos (Subscribe;
+(1) registro de clientes para banco de dados de contatos (Subscribe);
 (2) contato com campo de mensagem que será enviada diretamente para o fotógrafo (através da API externa "Brevo"). 
+```
+ATENÇÃO: A chave informada no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo.
+```
 
->>>>>>>>>>>> A chave informada no repositório do MVP foi cancelada, por favor utilizar a chave informada no drive do vídeo <<<<<<<<<<<<<<<<<<<
-
-Utilizando 2 informações para cadastro: nome e e-mail.
+As rotas da função "Subscribe" utiliza 2 informações: nome e e-mail.
 
 ```
 {
@@ -20,7 +21,7 @@ Utilizando 2 informações para cadastro: nome e e-mail.
 }
 ```
 
-3 informações para contato: nome, e-mail e mensagem.
+A rota da função "Contact" (API externa) 3 informações: nome, e-mail e mensagem.
 
 ```
 {
@@ -29,6 +30,8 @@ Utilizando 2 informações para cadastro: nome e e-mail.
   "nome": "string"
 }
 ```
+
+![image](https://github.com/user-attachments/assets/cc8a1090-bf9f-428e-bd53-8f42775b80c9)
 
 ---
 ## Como executar 
