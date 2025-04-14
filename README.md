@@ -11,7 +11,7 @@ Objetivo: Criação de API integrada a website pessoal para divulgação de foto
 ```
 ATENÇÃO:
 ```
-A chave informada no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo. (Atualizado: 14/04)
+A chave  que está no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo. (Atualizado: 14/04)
 ```
 As rotas da função "Subscribe" utiliza 2 informações: nome e e-mail.
 
