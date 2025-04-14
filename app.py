@@ -242,7 +242,7 @@ def contact_client(body: ContactFormSchema):
 
     # 2. Enviar e-mail via Brevo
     try:
-        brevo_api_key = "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"  # Chave API Brevo
+        brevo_api_key = "..."  # Chave API Brevo - Informado junto aos links do MVP
         brevo_url = "https://api.brevo.com/v3/smtp/email"
         headers = {
             "accept": "application/json",
