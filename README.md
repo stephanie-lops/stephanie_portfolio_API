@@ -83,13 +83,11 @@ Certifique-se de ter o [Docker](https://docs.docker.com/engine/install/) instala
 
 Navegue até o diretório que contém o Dockerfile e o requirements.txt no terminal.
 Execute **como administrador** o seguinte comando para construir a imagem Docker:
-
 ```
 $ docker build -t stephanie-portfolio-api .
 ```
 
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
-
 ```
 $ docker run -p 5000:5000 stephanie-portfolio-api
 ```
@@ -100,35 +98,29 @@ Uma vez executando, para acessar a API, basta abrir o [http://localhost:5000/#/]
 ### Alguns comandos úteis do Docker
 
 **Para verificar se a imagem foi criada** você pode executar o seguinte comando:
-
 ```
 $ docker images
 ```
 
- Caso queira **remover uma imagem**, basta executar o comando:
+ Caso queira **remover uma imagem**, basta executar o comando abaixo . Subistituindo o `IMAGE ID` pelo código da imagem
 ```
 $ docker rmi <IMAGE ID>
 ```
-Subistituindo o `IMAGE ID` pelo código da imagem
 
-**Para verificar se o container está em exceução** você pode executar o seguinte comando:
-
+**Para verificar se o container está em execução:
 ```
 $ docker container ls --all
 ```
 
- Caso queira **parar um conatiner**, basta executar o comando:
+ Caso queira **parar um conatiner**:
 ```
 $ docker stop <CONTAINER ID>
 ```
-Subistituindo o `CONTAINER ID` pelo ID do conatiner
-
 
  Caso queira **destruir um conatiner**, basta executar o comando:
 ```
 $ docker rm <CONTAINER ID>
 ```
-Para mais comandos, veja a [documentação do docker](https://docs.docker.com/engine/reference/run/).
 
 
 ---
