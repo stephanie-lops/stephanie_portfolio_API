@@ -1,0 +1,163 @@
+
+# [API] Stephanie's Portfolio Register Center
+## Cadasto de clientes e contato via e-mail pelo portfólio de fotografia analógica
+**Autor: Stephanie Lopes**
+
+Este projeto é o meu MVP da Sprint 3 do curso de **Desenvolvimento Full Stack Básico** da PUC RIO, 2024-2025.
+
+Objetivo: Criação de API integrada a website pessoal para divulgação de fotografias analógicas e campo de contato para parcerias de trabalho. Essa API é responsável por (1) registro de clientes para recebimento de uma futura newsletter, (2) contato com campo de mensagem que será enviada diretamente para o e-mail do fotógrafo (através da API externa "Brevo"). O uso de uma website pessoal como portfólio exclui a necessidade do uso de websites genéricos de portfólio e emite uma mensagem de maior profissionalismo e confiança para clientes e parceiros.
+
+Utilizando 2 informações para cadastro: nome e e-mail.
+
+```
+{
+  "email": "string",
+  "nome": "string"
+}
+```
+
+3 informações para contato: nome, e-mail e mensagem.
+
+```
+{
+  "email": "user@example.com",
+  "mensagem": "string",
+  "nome": "string"
+}
+```
+
+---
+## Como executar 
+
+Será necessário ter todas as libs python listadas no `requirements.txt` instaladas.
+Após clonar o repositório, é necessário ir ao diretório raiz, pelo terminal, para poder executar os comandos descritos abaixo.
+
+> É fortemente indicado o uso de ambientes virtuais do tipo [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
+
+Criar ambiente virtual env:
+
+```
+python3 -m venv env
+```
+
+Ativar ambiente virtual env (Windows):
+
+```
+.\env\Scripts\activate
+```
+
+Instalar as dependências/bibliotecas, descritas no arquivo `requirements.txt`.
+
+```
+(env)$ pip install -r requirements.txt
+```
+
+## 1 - Para executar através do Flask
+
+Para executar a API  basta executar:
+
+```
+(env)$ flask run --host 0.0.0.0 --port 5000
+```
+
+Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor
+automaticamente após uma mudança no código fonte. 
+
+```
+(env)$ flask run --host 0.0.0.0 --port 5000 --reload
+```
+
+Abra o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador para verificar o status da API em execução.
+
+---
+## 2 - Como executar através do Docker
+
+Certifique-se de ter o [Docker](https://docs.docker.com/engine/install/) instalado e em execução em sua máquina.
+
+Navegue até o diretório que contém o Dockerfile e o requirements.txt no terminal.
+Execute **como administrador** o seguinte comando para construir a imagem Docker:
+
+```
+$ docker build -t stephanie-portfolio-api .
+```
+
+Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
+
+```
+$ docker run -p 5000:5000 stephanie-portfolio-api
+```
+
+Uma vez executando, para acessar a API, basta abrir o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador.
+
+
+### Alguns comandos úteis do Docker
+
+**Para verificar se a imagem foi criada** você pode executar o seguinte comando:
+
+```
+$ docker images
+```
+
+ Caso queira **remover uma imagem**, basta executar o comando:
+```
+$ docker rmi <IMAGE ID>
+```
+Subistituindo o `IMAGE ID` pelo código da imagem
+
+**Para verificar se o container está em exceução** você pode executar o seguinte comando:
+
+```
+$ docker container ls --all
+```
+
+ Caso queira **parar um conatiner**, basta executar o comando:
+```
+$ docker stop <CONTAINER ID>
+```
+Subistituindo o `CONTAINER ID` pelo ID do conatiner
+
+
+ Caso queira **destruir um conatiner**, basta executar o comando:
+```
+$ docker rm <CONTAINER ID>
+```
+Para mais comandos, veja a [documentação do docker](https://docs.docker.com/engine/reference/run/).
+
+
+---
+## Como utilizar as rotas no Swagger
+
+Para adicionar um item através da rota POST:
+```
+1 - Clicar em Try it out.
+2 - Preencher os campos nome, quantity e size.
+3 - Clicar em Execute.
+```
+
+Para editar um item através da rota PUT:
+
+```
+1 - Clicar em Try it out.
+2 - Clicar no campo Request body.
+3 - Selecionar tudo com ctrl A.
+4 - Apagar.
+5 - Colocar o código a seguir, editando os campos "originalName" e "originalSize" de acordo com o item que deseja editar:
+
+{
+  "originalName": "Button-Detail Shirt",
+  "originalSize": "M",
+  "nome": "Button-Detail Shirt",
+  "size": "GG",
+  "quantity": 5
+}
+
+6 - Clicar em Execute.
+```
+
+Para excluir um item através da rota DELETE:
+```
+1 - Clicar em Try it out.
+2 - Preencher os campos nome e size.
+3 - Clicar em Execute.
+```
+
