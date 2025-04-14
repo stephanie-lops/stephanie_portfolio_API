@@ -134,37 +134,59 @@ Para mais comandos, veja a [documentação do docker](https://docs.docker.com/en
 ---
 ## Como utilizar as rotas no Swagger
 
-Para adicionar um item através da rota POST:
+Para adicionar um cliente através da rota POST/client:
 ```
-1 - Clicar em Try it out.
-2 - Preencher os campos nome, quantity e size.
-3 - Clicar em Execute.
-```
-
-Para editar um item através da rota PUT:
-
-```
-1 - Clicar em Try it out.
-2 - Clicar no campo Request body.
-3 - Selecionar tudo com ctrl A.
-4 - Apagar.
-5 - Colocar o código a seguir, editando os campos "originalName" e "originalSize" de acordo com o item que deseja editar:
+1 - Editar o campo Request body com os dados de nome e e-mail do cliente e ser registrado:
 
 {
-  "originalName": "Button-Detail Shirt",
-  "originalSize": "M",
-  "nome": "Button-Detail Shirt",
-  "size": "GG",
-  "quantity": 5
+  "email": "joao@email.com",
+  "nome": "joao"
 }
 
-6 - Clicar em Execute.
+2 - Clicar em Execute.
 ```
 
-Para excluir um item através da rota DELETE:
+Para editar um cliente através da rota PUT:
+
 ```
-1 - Clicar em Try it out.
-2 - Preencher os campos nome e size.
-3 - Clicar em Execute.
+1 - Editar o campo Request body com os dados atuai e os dados como eu gostaria de editar:
+
+{
+  "email": "stephanie_atualizado@email.com",
+  "nome": "stephanie atuaizado",
+  "originalEmail": "stephanie@email.com",
+  "originalName": "stephanie"
+}
+
+2 - Clicar em Execute.
 ```
 
+Para excluir um cliente através da rota DELETE:
+```
+1 - Editar o campo Request body com os dados de nome e e-mail do cliente a ser excluído:
+
+{
+  "email": "joao@email.com",
+  "nome": "joao"
+}
+
+2 - Clicar em Execute.
+```
+Para buscar um cliente através da rota GET:
+```
+1 - Preencher o formulário com nome e e-mail ou pelo menos o nome, para ser buscado o e-mail.
+2 - Clicar em Execute.
+```
+
+Para adicionar uma mensafem através da rota POST/contact:
+```
+1 - Editar o campo Request body com os dados de nome, e-mail do cliente e ser registrado e a mensagem a ser transmitida:
+
+{
+  "email": "beatriz@example.com",
+  "mensagem": "Olá, gostaria de te chamar para participar de um projeto...",
+  "nome": "beatriz"
+}
+
+2 - Clicar em Execute.
+```
