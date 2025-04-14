@@ -1,17 +1,18 @@
 
 # [API] Stephanie's Portfolio Register Center
-## Cadasto de clientes e contato via e-mail pelo portfólio de fotografia analógica
 **Autor: Stephanie Lopes**
 
 Este projeto é o meu MVP da Sprint 3 do curso de **Desenvolvimento Full Stack Básico** da PUC RIO, 2024-2025.
 
 Objetivo: Criação de API integrada a website pessoal para divulgação de fotografias analógicas e campo de contato para parcerias de trabalho. Essa API é responsável por:
+```
 (1) registro de clientes para banco de dados de contatos (Subscribe);
-(2) contato com campo de mensagem que será enviada diretamente para o fotógrafo (Contact). 
+(2) contato com campo de mensagem que será enviada diretamente para o fotógrafo (Contact).
 ```
-ATENÇÃO: A chave informada no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo.
+ATENÇÃO:
 ```
-
+A chave informada no repositório do MVP foi cancelada, por favor, utilizar a chave informada no drive do vídeo. (Atualizado: 14/04)
+```
 As rotas da função "Subscribe" utiliza 2 informações: nome e e-mail.
 
 ```
